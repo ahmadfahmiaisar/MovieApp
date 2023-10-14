@@ -13,14 +13,14 @@ import com.santridev.newmovieapp.presentation.movie.detail.MovieDetailActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MovieNowPlayingFragment : BaseFragment<FragmentMovieBinding, MovieNowPlayingViewModel>() {
+class MovieNowPlayingFragment : BaseFragment<FragmentMovieBinding, MovieViewModel>() {
     override val getViewBinding: (LayoutInflater, ViewGroup?, Boolean) -> FragmentMovieBinding
         get() = FragmentMovieBinding::inflate
 
-    override val getViewModelClass: Class<MovieNowPlayingViewModel>
-        get() = MovieNowPlayingViewModel::class.java
+    override val getViewModelClass: Class<MovieViewModel>
+        get() = MovieViewModel::class.java
 
-    private val adapter by lazy { MovieNowPlayingAdapter() }
+    private val adapter by lazy { MovieAdapter() }
     private var movies = mutableListOf<MovieUiModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

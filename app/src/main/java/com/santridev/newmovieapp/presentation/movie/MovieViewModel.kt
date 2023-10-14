@@ -14,7 +14,7 @@ import javax.inject.Inject
 import kotlinx.coroutines.launch
 
 @HiltViewModel
-class MovieNowPlayingViewModel @Inject constructor(
+class MovieViewModel @Inject constructor(
     private val getMovieNowPlayingUseCase: GetMovieNowPlayingUseCase,
     private val getMoviePopular: GetMoviePopularUseCase,
     private val dispatcher: DispatcherProvider

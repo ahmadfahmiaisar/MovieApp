@@ -9,8 +9,8 @@ import com.santridev.newmovieapp.base.extension.loadPoster
 import com.santridev.newmovieapp.databinding.ItemMovieBinding
 import com.santridev.newmovieapp.domain.model.MovieUiModel
 
-class MovieNowPlayingAdapter :
-    ListAdapter<MovieUiModel, MovieNowPlayingAdapter.MovieViewHolder>(diffCallBack) {
+class MovieAdapter :
+    ListAdapter<MovieUiModel, MovieAdapter.MovieViewHolder>(diffCallBack) {
     private var onItemMovieClicked: ((Int) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
